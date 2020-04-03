@@ -27,11 +27,13 @@
 <meta property="og:site_name" content="Mr Joe Blog">
 <meta property="og:description" content="使用hexo+github page搭建简易个人博客​        最近在学习java，想通过博客的方式记录一下学习中的问题或者思路，看到网上使用hexo+github page搭建的个人博客，就试着学一学搭建一个属于自己的个人博客。本文旨在提示搭建过程中遇到的问题，对具体过程会给出对应详细教程的连接，请自行查看。 教程参考 两个很详细的搭建教程（对比照做基本没什么问题） https:&#x2F;&#x2F;blo">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="d:/Java/Tools/Typora/images/1585926751465.png">
 <meta property="article:published_time" content="2020-04-03T08:49:35.101Z">
-<meta property="article:modified_time" content="2020-04-03T08:49:35.172Z">
+<meta property="article:modified_time" content="2020-04-03T15:18:01.311Z">
 <meta property="article:author" content="Kelly">
 <meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="d:/Java/Tools/Typora/images/1585926751465.png">
 
 <link rel="canonical" href="http://yoursite.com/child/2020/04/03/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">
 
@@ -217,8 +219,9 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2020-04-03 16:49:35" itemprop="dateCreated datePublished" datetime="2020-04-03T16:49:35+08:00">2020-04-03</time>
+              <time title="创建时间：2020-04-03 16:49:35 / 修改时间：23:18:01" itemprop="dateCreated datePublished" datetime="2020-04-03T16:49:35+08:00">2020-04-03</time>
             </span>
 
           
@@ -242,9 +245,8 @@
 </ul>
 <h2 id="总结几个本人遇到但教程中没有提到的问题"><a href="#总结几个本人遇到但教程中没有提到的问题" class="headerlink" title="总结几个本人遇到但教程中没有提到的问题"></a>总结几个本人遇到但教程中没有提到的问题</h2><ul>
 <li><p>Git Bash Here  安装 hexo 时提示  npm 找不到</p>
-<ul>
-<li>默认应该安装node.js时会把npm和node.js的路径配置在Path中，但我的path中只有node.js，于是手动添加npm的路径（一般npm路径应该和node.js在一起，可以找一找npm.exe的路径填进path）</li>
-</ul>
+</li>
+<li><p>默认应该安装node.js时会把npm和node.js的路径配置在Path中，但我的path中只有node.js，于是手动添加npm的路径（一般npm路径应该和node.js在一起，可以找一找npm.exe的路径填进path）</p>
 </li>
 <li><p>关于npm hexo时候-bash:hexo:command not found的问题</p>
 <ul>
@@ -266,6 +268,32 @@
 <li><p>部署好之后可以通过链接访问博客，这时兴奋的你可能立即打开该链接却什么都没有，不要慌，前面操作没问题的情况下你需要等几分钟（我的电脑是大概两分钟），它接到你的部署再更新到博客是需要时间的（如果很久了还刷新不出来，一定是前面某步没操作好，重新部署即可）</p>
 </li>
 <li><p>配置站点信息，可能你和我一样写了中文，虽然指定了语言，但是这时任然可能网页中会出现乱码，因为配置文件的编码问题，用notepad++等转换一下编码为UTF-8，重新部署提交即可</p>
+</li>
+<li><p>最后一个问题——提交文章时 hexo d  报错问题：</p>
+<ul>
+<li><p>原因未知，可能是修改了_config.yml 文件的url导致的，改回去任然不行；按照网上的修改很多都无济于事，反而爆出了新错误</p>
+</li>
+<li><p>fatal: ‘ （这里是你在__config.yml中设置的ssh链接 ）  ‘ does not appear to be a git repository</p>
+</li>
+<li><p>fatal: unable to access ‘（这里是你在__config.yml中设置的ssh链接 ）’: Recv failure: Connection was reset</p>
+</li>
+<li><blockquote>
+<p>Error: Spawn failed </p>
+<p>at ChildProcess.<anonymous> (E:\Blog\hexo\node_modules\hexo-util\lib\spawn.js:51:21)</p>
+</blockquote>
+</li>
+<li><p>还有很多错误基本相似，不再一一列举</p>
+</li>
+<li><p>下面说一下我是怎么解决的：</p>
+<ul>
+<li><p>（说点废话）本来我认为以前已经配置好ssh并添加到github了，前面上传github或者更新文章都没问题，所以没有在意网上说重新配置Git的提议，但是在看了两个小时的解决方案后还没能解决该问题的状态下，我决定试一试，重新配置了ssh并关联到github，此时再hexo d又出现了新错误：</p>
+<p><img src="D:/Java/Tools/Typora/images/1585926751465.png" alt="1585926751465"></p>
+<p>查找该错误是——远程终端意外挂断：</p>
+<p>一番查找后，终于看到帖子<a href="https://zimt8.com/questions/15240815/介绍的解决该错误的方法，照做，解决了问题。" target="_blank" rel="noopener">https://zimt8.com/questions/15240815/介绍的解决该错误的方法，照做，解决了问题。</a></p>
+</li>
+</ul>
+</li>
+</ul>
 </li>
 </ul>
 
