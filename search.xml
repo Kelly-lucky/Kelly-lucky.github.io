@@ -56,12 +56,12 @@
 <ul>
 <li><p>（说点废话）本来我认为以前已经配置好ssh并添加到github了，前面上传github或者更新文章都没问题，所以没有在意网上说重新配置Git的提议，但是在看了两个小时的解决方案后还没能解决该问题的状态下，我决定试一试，重新配置了ssh并关联到github，此时再hexo d又出现了新错</p>
 <p><img src="/.com//01.png" alt></p>
+</li>
+</ul>
+</li>
+</ul>
 <p>查找该错误是——远程终端意外挂断：</p>
 <p>一番查找后，终于看到帖子<a href="https://zimt8.com/questions/15240815/" target="_blank" rel="noopener">https://zimt8.com/questions/15240815/</a>介绍的解决该错误的方法，照做，解决了问题。</p>
-</li>
-</ul>
-</li>
-</ul>
 </li>
 </ul>
 ]]></content>
