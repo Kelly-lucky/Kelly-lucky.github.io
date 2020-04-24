@@ -1,6 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>String的replace和replaceAll的区别妙用</title>
+    <url>/2020/04/24/String%E7%9A%84replace%E5%92%8CreplaceAll%E7%9A%84%E5%8C%BA%E5%88%AB%E5%A6%99%E7%94%A8/</url>
+    <content><![CDATA[<h2 id="String的replace和replaceAll的区别妙用"><a href="#String的replace和replaceAll的区别妙用" class="headerlink" title="String的replace和replaceAll的区别妙用"></a>String的replace和replaceAll的区别妙用</h2><p>相同点：都是全部替换，从左到右执行</p>
+<p>主要不同点：</p>
+<ul>
+<li><p>repalce不支持正则表达式，仅支持字符的替换或字符串的替换；</p>
+</li>
+<li><p>replaceAll支持正则表达式，因此会对参数进行解析（两个参数均是），如果是符合正则的，会解析成正则再进行替换</p>
+</li>
+</ul>
+<p>扩展：</p>
+<ul>
+<li>如果只想替换第一次出现的，可以使用replaceFirst()，该方法也基于规则表达式的替换</li>
+</ul>
+<p>举例：</p>
+<ul>
+<li>学习filter，案例：敏感词汇过滤，需求——有几个敏感词汇就替换成几个*</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> String <span class="title">getParameter</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">       <span class="comment">//调用父类原有方法获取参数</span></span><br><span class="line">       String parameter = <span class="keyword">super</span>.getParameter(name);</span><br><span class="line">       <span class="comment">//判断是否包含敏感词汇，包含，将敏感词汇替换成同等数量的*</span></span><br><span class="line">       <span class="keyword">for</span> (String word : list) &#123;</span><br><span class="line">           <span class="keyword">if</span> (parameter.contains(word)) &#123;</span><br><span class="line">               String w = word.replaceAll(<span class="string">"."</span>, <span class="string">"*"</span>);</span><br><span class="line">               parameter = parameter.replace(word, w);</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">return</span> parameter;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
     <title>搭建博客</title>
     <url>/2020/04/03/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</url>
     <content><![CDATA[<h1 id="使用hexo-github-page搭建简易个人博客"><a href="#使用hexo-github-page搭建简易个人博客" class="headerlink" title="使用hexo+github page搭建简易个人博客"></a><center><strong>使用hexo+github page搭建简易个人博客</strong></center></h1><p>​        最近在学习java，想通过博客的方式记录一下学习中的问题或者思路，看到网上使用hexo+github page搭建的个人博客，就试着学一学搭建一个属于自己的个人博客。本文旨在提示搭建过程中遇到的问题，对具体过程会给出对应详细教程的连接，请自行查看。</p>
@@ -64,6 +87,28 @@
 </ul>
 <p>  查找该错误是——远程终端意外挂断：</p>
 <p>  一番查找后，终于看到帖子<a href="https://zimt8.com/questions/15240815/" target="_blank" rel="noopener">https://zimt8.com/questions/15240815/</a>介绍的解决该错误的方法，照做，解决了问题。</p>
+<ul>
+<li>关于解决图片上传问题，我用typora 0.9.84版本+PicGo+阿里云oss解决，挺方便</li>
+</ul>
+]]></content>
+  </entry>
+  <entry>
+    <title>js执行顺序问题</title>
+    <url>/2020/04/13/js%E6%89%A7%E8%A1%8C%E9%A1%BA%E5%BA%8F%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<h2 id="js执行顺序问题"><a href="#js执行顺序问题" class="headerlink" title="js执行顺序问题"></a>js执行顺序问题</h2><p>问题：</p>
+<ul>
+<li>学习js及jQuery，发现有时获取对象或获取对象的值等可以放在事件函数外，有时却并不能这么做，必须放在事件函数内，这使我很疑惑。</li>
+</ul>
+<p>原因：</p>
+<ul>
+<li>没有注意到代码执行顺序</li>
+</ul>
+<p>结论：</p>
+<ul>
+<li>js代码在页面加载时就开始执行了</li>
+<li>如果是初始代码中就有的内容的获取，那随着页面加载它就存在了就能获取到，这种就不必写在事件函数内部</li>
+<li>如果是通过加载js代码后来添加或者修改的，那页面的初始加载并不能获取这些，就必须写在事件函数内，随着事件操作加载出来再进行获取</li>
+</ul>
 ]]></content>
   </entry>
 </search>

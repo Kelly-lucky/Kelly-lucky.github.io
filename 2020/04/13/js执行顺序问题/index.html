@@ -20,20 +20,20 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":5,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="Java学习及分享">
-<meta property="og:type" content="website">
-<meta property="og:title" content="categories">
-<meta property="og:url" content="http://yoursite.com/child/categories/index.html">
+  <meta name="description" content="js执行顺序问题问题：  学习js及jQuery，发现有时获取对象或获取对象的值等可以放在事件函数外，有时却并不能这么做，必须放在事件函数内，这使我很疑惑。  原因：  没有注意到代码执行顺序  结论：  js代码在页面加载时就开始执行了 如果是初始代码中就有的内容的获取，那随着页面加载它就存在了就能获取到，这种就不必写在事件函数内部 如果是通过加载js代码后来添加或者修改的，那页面的初始加载并不">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js执行顺序问题">
+<meta property="og:url" content="http://yoursite.com/child/2020/04/13/js%E6%89%A7%E8%A1%8C%E9%A1%BA%E5%BA%8F%E9%97%AE%E9%A2%98/index.html">
 <meta property="og:site_name" content="Mr Joe Blog">
-<meta property="og:description" content="Java学习及分享">
+<meta property="og:description" content="js执行顺序问题问题：  学习js及jQuery，发现有时获取对象或获取对象的值等可以放在事件函数外，有时却并不能这么做，必须放在事件函数内，这使我很疑惑。  原因：  没有注意到代码执行顺序  结论：  js代码在页面加载时就开始执行了 如果是初始代码中就有的内容的获取，那随着页面加载它就存在了就能获取到，这种就不必写在事件函数内部 如果是通过加载js代码后来添加或者修改的，那页面的初始加载并不">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-04-03T09:31:12.000Z">
-<meta property="article:modified_time" content="2020-04-03T09:31:52.901Z">
+<meta property="article:published_time" content="2020-04-13T01:18:11.452Z">
+<meta property="article:modified_time" content="2020-04-13T01:18:11.602Z">
 <meta property="article:author" content="Kelly">
 <meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/child/categories/">
+<link rel="canonical" href="http://yoursite.com/child/2020/04/13/js%E6%89%A7%E8%A1%8C%E9%A1%BA%E5%BA%8F%E9%97%AE%E9%A2%98/">
 
 
 <script id="page-configurations">
@@ -41,13 +41,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>categories | Mr Joe Blog
-</title>
+  <title>js执行顺序问题 | Mr Joe Blog</title>
   
 
 
@@ -188,47 +187,100 @@
       <div class="main-inner">
         <div class="content-wrap">
           
-  
-  
 
-          <div class="content page posts-expand">
+          <div class="content post posts-expand">
             
 
     
-    
-    
-    <div class="post-block" lang="zh-CN">
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/child/2020/04/13/js%E6%89%A7%E8%A1%8C%E9%A1%BA%E5%BA%8F%E9%97%AE%E9%A2%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/img.jpg">
+      <meta itemprop="name" content="Kelly">
+      <meta itemprop="description" content="Java学习及分享">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mr Joe Blog">
+    </span>
       <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          js执行顺序问题
+        </h1>
 
-<h1 class="post-title" itemprop="name headline">categories
-</h1>
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
 
-<div class="post-meta">
+              <time title="创建时间：2020-04-13 09:18:11" itemprop="dateCreated datePublished" datetime="2020-04-13T09:18:11+08:00">2020-04-13</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="js执行顺序问题"><a href="#js执行顺序问题" class="headerlink" title="js执行顺序问题"></a>js执行顺序问题</h2><p>问题：</p>
+<ul>
+<li>学习js及jQuery，发现有时获取对象或获取对象的值等可以放在事件函数外，有时却并不能这么做，必须放在事件函数内，这使我很疑惑。</li>
+</ul>
+<p>原因：</p>
+<ul>
+<li>没有注意到代码执行顺序</li>
+</ul>
+<p>结论：</p>
+<ul>
+<li>js代码在页面加载时就开始执行了</li>
+<li>如果是初始代码中就有的内容的获取，那随着页面加载它就存在了就能获取到，这种就不必写在事件函数内部</li>
+<li>如果是通过加载js代码后来添加或者修改的，那页面的初始加载并不能获取这些，就必须写在事件函数内，随着事件操作加载出来再进行获取</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/04/03/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" rel="prev" title="搭建博客">
+      <i class="fa fa-chevron-left"></i> 搭建博客
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/04/24/String%E7%9A%84replace%E5%92%8CreplaceAll%E7%9A%84%E5%8C%BA%E5%88%AB%E5%A6%99%E7%94%A8/" rel="next" title="String的replace和replaceAll的区别妙用">
+      String的replace和replaceAll的区别妙用 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
   
 
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
-          
-      </div>
-      
-      
-      
-    </div>
-    
-
-    
-    
-    
 
 
           </div>
           
+    <div class="comments" id="gitalk-container"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -275,6 +327,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#js执行顺序问题"><span class="nav-number">1.</span> <span class="nav-text">js执行顺序问题</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -446,6 +499,25 @@ window.addEventListener('pjax:success', () => {
 
   
 
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : '34385258974893a48ff8',
+      clientSecret: '95779d8caae37f42ffccd042570ccbff3cbf9bee',
+      repo        : 'kelly-lucky.github.io',
+      owner       : 'Kelly-lucky',
+      admin       : ['Kelly-lucky'],
+      id          : '3e23eeec6e836beb79c4da86719d16db',
+        language: 'zh-CN',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
 
     </div>
 </body>

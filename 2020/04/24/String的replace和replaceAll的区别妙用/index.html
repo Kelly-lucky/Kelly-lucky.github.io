@@ -20,20 +20,20 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":true,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":5,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="Java学习及分享">
-<meta property="og:type" content="website">
-<meta property="og:title" content="categories">
-<meta property="og:url" content="http://yoursite.com/child/categories/index.html">
+  <meta name="description" content="String的replace和replaceAll的区别妙用相同点：都是全部替换，从左到右执行 主要不同点：  repalce不支持正则表达式，仅支持字符的替换或字符串的替换；  replaceAll支持正则表达式，因此会对参数进行解析（两个参数均是），如果是符合正则的，会解析成正则再进行替换   扩展：  如果只想替换第一次出现的，可以使用replaceFirst()，该方法也基于规则表达式的替">
+<meta property="og:type" content="article">
+<meta property="og:title" content="String的replace和replaceAll的区别妙用">
+<meta property="og:url" content="http://yoursite.com/child/2020/04/24/String%E7%9A%84replace%E5%92%8CreplaceAll%E7%9A%84%E5%8C%BA%E5%88%AB%E5%A6%99%E7%94%A8/index.html">
 <meta property="og:site_name" content="Mr Joe Blog">
-<meta property="og:description" content="Java学习及分享">
+<meta property="og:description" content="String的replace和replaceAll的区别妙用相同点：都是全部替换，从左到右执行 主要不同点：  repalce不支持正则表达式，仅支持字符的替换或字符串的替换；  replaceAll支持正则表达式，因此会对参数进行解析（两个参数均是），如果是符合正则的，会解析成正则再进行替换   扩展：  如果只想替换第一次出现的，可以使用replaceFirst()，该方法也基于规则表达式的替">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-04-03T09:31:12.000Z">
-<meta property="article:modified_time" content="2020-04-03T09:31:52.901Z">
+<meta property="article:published_time" content="2020-04-24T12:27:07.500Z">
+<meta property="article:modified_time" content="2020-04-24T12:32:11.239Z">
 <meta property="article:author" content="Kelly">
 <meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/child/categories/">
+<link rel="canonical" href="http://yoursite.com/child/2020/04/24/String%E7%9A%84replace%E5%92%8CreplaceAll%E7%9A%84%E5%8C%BA%E5%88%AB%E5%A6%99%E7%94%A8/">
 
 
 <script id="page-configurations">
@@ -41,13 +41,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>categories | Mr Joe Blog
-</title>
+  <title>String的replace和replaceAll的区别妙用 | Mr Joe Blog</title>
   
 
 
@@ -188,47 +187,102 @@
       <div class="main-inner">
         <div class="content-wrap">
           
-  
-  
 
-          <div class="content page posts-expand">
+          <div class="content post posts-expand">
             
 
     
-    
-    
-    <div class="post-block" lang="zh-CN">
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/child/2020/04/24/String%E7%9A%84replace%E5%92%8CreplaceAll%E7%9A%84%E5%8C%BA%E5%88%AB%E5%A6%99%E7%94%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/img.jpg">
+      <meta itemprop="name" content="Kelly">
+      <meta itemprop="description" content="Java学习及分享">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mr Joe Blog">
+    </span>
       <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          String的replace和replaceAll的区别妙用
+        </h1>
 
-<h1 class="post-title" itemprop="name headline">categories
-</h1>
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
 
-<div class="post-meta">
+              <time title="创建时间：2020-04-24 20:27:07 / 修改时间：20:32:11" itemprop="dateCreated datePublished" datetime="2020-04-24T20:27:07+08:00">2020-04-24</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="String的replace和replaceAll的区别妙用"><a href="#String的replace和replaceAll的区别妙用" class="headerlink" title="String的replace和replaceAll的区别妙用"></a>String的replace和replaceAll的区别妙用</h2><p>相同点：都是全部替换，从左到右执行</p>
+<p>主要不同点：</p>
+<ul>
+<li><p>repalce不支持正则表达式，仅支持字符的替换或字符串的替换；</p>
+</li>
+<li><p>replaceAll支持正则表达式，因此会对参数进行解析（两个参数均是），如果是符合正则的，会解析成正则再进行替换</p>
+</li>
+</ul>
+<p>扩展：</p>
+<ul>
+<li>如果只想替换第一次出现的，可以使用replaceFirst()，该方法也基于规则表达式的替换</li>
+</ul>
+<p>举例：</p>
+<ul>
+<li>学习filter，案例：敏感词汇过滤，需求——有几个敏感词汇就替换成几个*</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> String <span class="title">getParameter</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">       <span class="comment">//调用父类原有方法获取参数</span></span><br><span class="line">       String parameter = <span class="keyword">super</span>.getParameter(name);</span><br><span class="line">       <span class="comment">//判断是否包含敏感词汇，包含，将敏感词汇替换成同等数量的*</span></span><br><span class="line">       <span class="keyword">for</span> (String word : list) &#123;</span><br><span class="line">           <span class="keyword">if</span> (parameter.contains(word)) &#123;</span><br><span class="line">               String w = word.replaceAll(<span class="string">"."</span>, <span class="string">"*"</span>);</span><br><span class="line">               parameter = parameter.replace(word, w);</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">return</span> parameter;</span><br></pre></td></tr></table></figure>
+
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/04/13/js%E6%89%A7%E8%A1%8C%E9%A1%BA%E5%BA%8F%E9%97%AE%E9%A2%98/" rel="prev" title="js执行顺序问题">
+      <i class="fa fa-chevron-left"></i> js执行顺序问题
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
   
 
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
-          
-      </div>
-      
-      
-      
-    </div>
-    
-
-    
-    
-    
 
 
           </div>
           
+    <div class="comments" id="gitalk-container"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -275,6 +329,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#String的replace和replaceAll的区别妙用"><span class="nav-number">1.</span> <span class="nav-text">String的replace和replaceAll的区别妙用</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -446,6 +501,25 @@ window.addEventListener('pjax:success', () => {
 
   
 
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : '34385258974893a48ff8',
+      clientSecret: '95779d8caae37f42ffccd042570ccbff3cbf9bee',
+      repo        : 'kelly-lucky.github.io',
+      owner       : 'Kelly-lucky',
+      admin       : ['Kelly-lucky'],
+      id          : '9d786eda2902ca6de1b8b93250882073',
+        language: 'zh-CN',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
 
     </div>
 </body>
